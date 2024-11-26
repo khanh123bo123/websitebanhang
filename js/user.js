@@ -10,20 +10,6 @@ var user =
             role: "admin"
 
         },
-        {
-            id: "USER2",
-            username: "user",
-            name: "Nguyễn Thị Việt Ánh",
-            sdt: "0389785322",
-            email: "vietanh7200@gmail",
-            address: "Châu Thành - Tây Ninh",
-            password: "1",
-            role: "user"
-
-        },
-
-
-
     ];
 
 // đẩy mảng user vào local

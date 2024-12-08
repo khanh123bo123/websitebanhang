@@ -2,13 +2,12 @@
 <html>
 
 <head>
-    <title>Store</title>
+    <title>ZERO SHOWROOM</title>
 
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style-1.css">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -46,12 +45,12 @@
                 <div id="my-nav" class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto header-menu">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">TRANG CHỦ <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.html">Trang chủ<span class="sr-only">(current)</span></a>
                         </li>
                         
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="rollroyces.html" tabindex="-1" aria-disabled="true">Rollroyces</a>
+                            <a class="nav-link" href="rollroyces.html" tabindex="-1" aria-disabled="true">Rolls-royce</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="mercedes.html" tabindex="-1" aria-disabled="true">Mercedes</a>
@@ -60,7 +59,7 @@
                             <a class="nav-link" href="bentley.html" tabindex="-1" aria-disabled="true">Bentley</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Chevorlet.html" tabindex="-1" aria-disabled="true">Chevorlet</a>
+                            <a class="nav-link" href="Chevorlet.html" tabindex="-1" aria-disabled="true">Chevrolet</a>
                         </li>
 
 
@@ -89,12 +88,9 @@
 
     </div>
 
-    <!-- ---- -->
-
     <!-- --body-- -->
     <!-- --banner-- -->
     <div class="container-fluid banner">
-
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -130,107 +126,150 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-
     </div>
-    <!-- ---- -->
+
+    <!-- browse categories -->
+    <section class="home-container">
+        <!-- <h2 class="home-heading">Browse Categories</h2> -->
+        <div class="home-cate row row-cols-3 row-cols-md-1">
+            <!-- category item 1 -->
+            <div class="col">
+                <article class="cate-item">
+                    <img
+                        src="/img/img-rolls.jpg"
+                        alt="..."
+                        class="cate-item-thumb"
+                    />
+                    <section class="cate-item-info">
+                        <h3 class="cate-item-title">Rolls-royce</h3>
+                        <p class="cate-item-desc">
+                            Rolls-Royce thể hiện sự tinh tế vượt thời gian, thiết kế thủ công đẳng cấp, động cơ mạnh mẽ, biểu tượng sang trọng, và giá trị sưu tầm cao.
+                        </p>
+                    </section>
+                </article>
+            </div>
+
+            <!-- category item 2 -->
+            <div class="col">
+                <article class="cate-item">
+                    <img
+                        src="/img/img-merce.jpg"
+                        alt="..."
+                        class="cate-item-thumb"
+                    />
+                    <section class="cate-item-info">
+                        <h3 class="cate-item-title">Mercedes</h3>
+                        <p class="cate-item-desc">
+                            Mercedes-Benz là biểu tượng sang trọng vượt thời gian, kết hợp thiết kế tinh tế, hiệu suất mạnh mẽ và giá trị lịch sử, thu hút giới đam mê xe cộ.
+                        </p>
+                    </section>
+                </article>
+            </div>
+
+            <!-- category item 3 -->
+            <div class="col">
+                <article class="cate-item">
+                    <img
+                        src="/img/img-bently.jpg"
+                        alt="..."
+                        class="cate-item-thumb"
+                    />
+                    <section class="cate-item-info">
+                        <h3 class="cate-item-title">Bentley</h3>
+                        <p class="cate-item-desc">
+                            Bentley mang vẻ đẹp vượt thời gian, kết hợp sự sang trọng tinh tế và kỹ thuật thủ công xuất sắc, biểu tượng của đẳng cấp và phong cách lịch lãm.
+                        </p>
+                    </section>
+                </article>
+            </div>
+            <!-- category item 4 -->
+            <div class="col">
+                <article class="cate-item">
+                    <img
+                        src="/img/img-chevro.jpg"
+                        alt="..."
+                        class="cate-item-thumb"
+                    />
+                    <section class="cate-item-info">
+                        <h3 class="cate-item-title">Chevrolet</h3>
+                        <p class="cate-item-desc">
+                            Chevrolet nổi bật với thiết kế phong cách, mạnh mẽ, biểu tượng của Mỹ, động cơ bền bỉ, và sức hút vượt thời gian, chinh phục giới đam mê xe cổ.
+                        </p>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </section>
+   
     <!-- --product-- -->
     <div class="container-fluid mt-5 mb-5">
         <div class="container product">
-            <div class="h3 mb-5">Sản phẩm bán chạy</div>
-            <div class="row" id="banchay">
-
-
-            </div>
+            <div class="h3 mb-5">Khám Phá Đa Dạng Mẫu Xe</div>
+            <!-- <div class="row" id="banchay">
+            </div> -->
+            <!-- Nút hiển thị bộ lọc -->
+            <button id="toggleFilterBtn" onclick="toggleFilter()">Bộ lọc</button>
         </div>
+        
+
+        <!-- Phần bộ lọc (ẩn mặc định) -->
+        <div id="filterForm" style="display: none;">
+            <h2>Bộ lọc</h2>
+
+            <!-- Hãng xe -->
+            <label for="brand">Hãng xe:</label>
+            <select id="brand" name="brand">
+                <option value="">Tất cả</option>
+                <option value="Rolls Royce">Rolls Royce</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Bentley">Bentley</option>
+                <option value="Chevrolet">Chevrolet</option>
+            </select>
+
+            <!-- Năm sản xuất -->
+            <label for="year">Năm sản xuất:</label>
+            <select id="year" name="year">
+                <option value="">Tất cả</option>
+                <option value="1900-1929">1900-1929</option>
+                <option value="1930-1949">1930-1949</option>
+                <option value="1950-1970">1950-1970</option>
+                <option value="1971-1980">1971-1980</option>
+                <option value="1981-1990">1981-1990</option>
+                <option value="1991-2000">1991-2000</option>
+            </select>
+
+            <!-- Khoảng giá -->
+            <label for="priceMin">Khoảng giá từ:</label>
+            <input type="number" id="priceMin" placeholder="Giá thấp nhất">
+
+            <label for="priceMax">Đến:</label>
+            <input type="number" id="priceMax" placeholder="Giá cao nhất">
+
+            <!-- Tình trạng xe -->
+            <label for="condition">Tình trạng xe:</label>
+            <select id="condition" name="condition">
+                <option value="">Tất cả</option>
+                <option value="new">Nguyên bản</option>
+                <option value="restored">Đã phục chế</option>
+                <option value="used">Đã qua sử dụng</option>
+            </select>
+
+            <button type="button" onclick="filterProducts()">Lọc</button>
+        </div>
+
+        <!-- Danh sách sản phẩm -->
+        <div id="productList"></div>
+
+        <!-- Phần phân trang -->
+        <div id="pagination"></div>
     
     </div>
+    
 
-    <!-- ---- -->
+
 
     <!-- --footer-- -->
     <div class="container-fluid">
-
-        <!-- --thongtin-- -->
-        <div class="container info">
-
-            <div class="row mt-5 mb-5">
-                <div class="col-3 info-col">
-                    <div class="h6">
-                        GỌI MUA HÀNG(8:30 - 17:00)
-                    </div>
-                    <a href="tel:0395342134">
-
-                        <i class="fas fa-phone-alt"></i>
-                        033 892 7972
-                    </a>
-
-                    <div class="info-foot">Tất cả các ngày trong tuần</div>
-                </div>
-                <div class="col-3 info-col">
-                    <div class="h6">GỌI MUA HÀNG(8:30 - 17:00) </div>
-
-                    <a href="tel:0395342134">
-                        <i class="fas fa-phone-alt"></i>
-                        033 892 7972
-                    </a>
-
-                    <div class="info-foot">Tất cả các ngày trong tuần</div>
-                </div>
-
-                <div class="col-3">
-                    <div class="h6">ĐĂNG KÍ NHẬN THÔNG TIN MỚI</div>
-                    <form action="" class="form-inline">
-                        <input type="text" class="form-control" style="width: 60%;">
-                        <a href="" class=" btn btn-outline-dark">Đăng kí</a>
-                    </form>
-                </div>
-                <div class="col-3 info-social">
-                    <div class="h6">THEO DÕI CHÚNG TÔI</div>
-                    <div class="row">
-                        <div class="col-3">
-                            <a href="">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="">
-                                <i class="fab fa-twitter"></i>
-
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="mr-3 cart">
-            <div class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="userDropdown">
-                    <i class="fas fa-user"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="user/auth.html" id="loginBtn">Đăng nhập</a>
-                    <a class="dropdown-item" href="user/profile.html" id="profileBtn" style="display: none;">Thông tin cá nhân</a>
-                    <a class="dropdown-item" href="admin/trangchu.html" id="adminBtn" style="display: none;">Quản trị</a>
-                    <a class="dropdown-item" href="#" id="logoutBtn" style="display: none;" onclick="logout()">Đăng xuất</a>
-                </div>
-            </div>
-            <a class="ml-3 mr-3" href="./cart.html">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-        </div>
-        <!-- ---- -->
-        <!-- --footer-- -->
         <div class="container-fluid footer-3">
             <div class="container">
                 <div class="row">
@@ -288,12 +327,73 @@
                                     href="https://www.facebook.com/motplus/">Mọt +</a></blockquote>
                         </div>
                     </div>
+
+                    <!-- --thongtin-- -->
+                    <div class="container info">
+
+                        <div class="row mt-5 mb-5">
+                            <div class="col-3 info-col">
+                                <div class="h6">
+                                    GỌI TƯ VẤN(8:30 - 17:00)
+                                </div>
+                                <a href="tel:0395342134">
+
+                                    <i class="fas fa-phone-alt"></i>
+                                    0123456789
+                                </a>
+
+                                <div class="info-foot">Tất cả các ngày trong tuần</div>
+                            </div>
+                            <div class="col-3 info-col">
+                                <div class="h6">GỌI MUA HÀNG(8:30 - 17:00) </div>
+
+                                <a href="tel:0395342134">
+                                    <i class="fas fa-phone-alt"></i>
+                                    0987654321
+                                </a>
+
+                                <div class="info-foot">Tất cả các ngày trong tuần</div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="h6">ĐĂNG KÍ NHẬN THÔNG TIN MỚI</div>
+                                <form action="" class="form-inline">
+                                    <input type="text" class="form-control" style="width: 60%;">
+                                    <a href="" class=" btn btn-outline-dark">Đăng kí</a>
+                                </form>
+                            </div>
+                            <div class="col-3 info-social">
+                                <div class="h6">THEO DÕI CHÚNG TÔI</div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-3">
+                                        <a href="">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-3">
+                                        <a href="">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-3">
+                                        <a href="">
+                                            <i class="fab fa-twitter"></i>
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- ---- -->
     </div>
-    <!-- ---- -->
    
 
 </body>
@@ -301,7 +401,7 @@
 <script src="js/product2.js"></script>
 <script src="js/control.js"></script>
 <script src="./js/user.js"></script>
-<script src="js/cart.js"></script>
+<!-- <script src="./js/"></script> -->
 
 
 </html>

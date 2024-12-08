@@ -205,69 +205,12 @@
     <div class="container-fluid mt-5 mb-5">
         <div class="container product">
             <div class="h3 mb-5">Khám Phá Đa Dạng Mẫu Xe</div>
-            <!-- <div class="row" id="banchay">
-            </div> -->
-            <!-- Nút hiển thị bộ lọc -->
-            <button id="toggleFilterBtn" onclick="toggleFilter()">Bộ lọc</button>
+            <div class="row" id="banchay">
+            </div>
         </div>
-        
-
-        <!-- Phần bộ lọc (ẩn mặc định) -->
-        <div id="filterForm" style="display: none;">
-            <h2>Bộ lọc</h2>
-
-            <!-- Hãng xe -->
-            <label for="brand">Hãng xe:</label>
-            <select id="brand" name="brand">
-                <option value="">Tất cả</option>
-                <option value="Rolls Royce">Rolls Royce</option>
-                <option value="Mercedes">Mercedes</option>
-                <option value="Bentley">Bentley</option>
-                <option value="Chevrolet">Chevrolet</option>
-            </select>
-
-            <!-- Năm sản xuất -->
-            <label for="year">Năm sản xuất:</label>
-            <select id="year" name="year">
-                <option value="">Tất cả</option>
-                <option value="1900-1929">1900-1929</option>
-                <option value="1930-1949">1930-1949</option>
-                <option value="1950-1970">1950-1970</option>
-                <option value="1971-1980">1971-1980</option>
-                <option value="1981-1990">1981-1990</option>
-                <option value="1991-2000">1991-2000</option>
-            </select>
-
-            <!-- Khoảng giá -->
-            <label for="priceMin">Khoảng giá từ:</label>
-            <input type="number" id="priceMin" placeholder="Giá thấp nhất">
-
-            <label for="priceMax">Đến:</label>
-            <input type="number" id="priceMax" placeholder="Giá cao nhất">
-
-            <!-- Tình trạng xe -->
-            <label for="condition">Tình trạng xe:</label>
-            <select id="condition" name="condition">
-                <option value="">Tất cả</option>
-                <option value="new">Nguyên bản</option>
-                <option value="restored">Đã phục chế</option>
-                <option value="used">Đã qua sử dụng</option>
-            </select>
-
-            <button type="button" onclick="filterProducts()">Lọc</button>
-        </div>
-
-        <!-- Danh sách sản phẩm -->
-        <div id="productList"></div>
-
-        <!-- Phần phân trang -->
-        <div id="pagination"></div>
     
     </div>
     
-
-
-
     <!-- --footer-- -->
     <div class="container-fluid">
         <div class="container-fluid footer-3">

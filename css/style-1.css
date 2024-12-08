@@ -87,6 +87,10 @@ video {
     vertical-align: baseline;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /* make sure to set some focus styles for accessibility */
 :focus {
     outline: 0;
@@ -486,6 +490,7 @@ button .menu {
     margin-top: 0.7rem;
 }
 .banner {
+    width: 100%;
     margin-top: 6%;
 }
 .logo {
@@ -495,6 +500,60 @@ button .menu {
 .logo img {
     width: 100%;
 }
+
+.home-container {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* .home-heading {
+    padding-bottom: 0px;
+} */
+
+.row {
+    /* flex-wrap: nowrap; */
+}
+
+.col {
+    width: 100%;
+    padding-right: 2px;
+    padding-bottom: 2px;
+}
+.cate-item {
+    position: relative;
+    flex-shrink: 0;
+    /* display: flex; */
+    column-gap: 20px;
+    background: #f3f1f1;
+    border-radius: 20px;
+    /* padding-left: 15px; */
+}
+
+.cate-item-thumb {
+    /* position: relative; */
+    object-fit: cover;
+    border-radius: 16px;
+    width: 100%;
+    height: 20vh;
+    /* max-width: 100%;
+    max-height: 100%; */
+}
+
+.cate-item-desc {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+}
+.cate-item-title {
+    /* position: relative; */
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 145.455%;
+    text-align: center;
+}
+
 .search input {
     border-radius: 20px;
 }
@@ -517,6 +576,10 @@ button .menu {
     border-bottom: 1px black solid;
 }
 
+/* .container .product {
+    padding: 15px;
+} */
+
 .product span {
     width: 20%;
     margin: 0 auto;
@@ -532,6 +595,93 @@ button .menu {
     width: 90%;
 }
 
+#toggleFilterBtn {
+    position: relative;
+    display: flex;
+    left: 100px;
+    width: 10%;
+    border-radius: 15%;
+    margin: 15px;
+}
+#filterForm {
+    padding: 20px;
+    margin: 15px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    max-width: 200px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none; /*Ẩn bộ lọc ban đầu*/
+}
+
+#filterForm label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#filterForm select,
+#filterForm input[type="number"],
+#filterForm button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#filterForm button {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+}
+
+#filterForm button:hover {
+    background-color: #0056b3;
+}
+
+/* #productList {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* .product {
+    padding: 20px;
+    margin: 10px;
+    background-color: #e9f7fa;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+} */
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#page-number {
+    padding: 8px 12px;
+    margin: 5px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#page-number:hover {
+    background-color: #ddd;
+}
+
+#page-number.active {
+    background-color: #007bff;
+    color: white;
+}
 .footer-3 {
     background: rgb(245, 243, 243);
     padding: 1rem;

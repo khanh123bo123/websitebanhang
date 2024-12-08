@@ -11,75 +11,13 @@
 .cc:hover {
     width: 150%;
 }
-/* header */
 
-/* Logo */
+.container-fluid {
+    position: relative;
+}
+
 .logo img {
     width: 100%;
-}
-
-.nav-item {
-    position: relative;
-}
-
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 10;
-    padding-top: 20px;
-}
-
-.nav-item:hover .dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-}
-
-.dropdown-inner {
-    position: relative;
-    padding: 16px;
-    border-radius: 12px;
-    background: #a39b9b;
-    box-shadow: 0 4px 24px rgba (0, 0, 0, 0.1);
-}
-
-.dropdown-inner::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #a39b9b;
-    filter: #a39b9b;
-}
-
-.dropdown-content {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.dropdown-link {
-    display: block;
-    padding: 8px 16px;
-    color: #ffffff;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    font-size: 1.4rem;
-    white-space: nowrap;
-}
-
-.dropdown-link:hover {
-    background: rgba(0, 0, 0, 0.1);
-    color: #f0f0f0;
 }
 
 .menu ul li a {

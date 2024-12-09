@@ -72,5 +72,54 @@ var listLocal = function () {
     }
     Save();
 };
+function searchProducts() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    const filteredProducts = product.filter(p =>
+        p.name.toLowerCase().includes(searchInput) ||
+        (p.description && p.description.toLowerCase().includes(searchInput))
+    );
+
+    displayProducts(filteredProducts);
+}
+
+// Lắng nghe sự kiện nút tìm kiếm
+document.getElementById("searchButton").addEventListener("click", function (event) {
+    event.preventDefault(); // Ngăn chặn reload trang
+    searchProducts();
+});
+
+// Lắng nghe sự kiện khi người dùng nhấn "Enter"
+document.getElementById("searchInput").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Ngăn chặn reload trang
+        searchProducts();
+    }
+});
+
+function displayProducts(products) {
+    const productContainer = document.getElementById('banchay');
+    productContainer.innerHTML = ''; // Xóa danh sách cũ
+
+    if (products.length === 0) {
+        productContainer.innerHTML = '<div class="col text-center">Không tìm thấy sản phẩm nào</div>';
+        return;
+    }
+
+    products.forEach(product => {
+        const productElement = document.createElement('div');
+        productElement.className = 'col';
+        productElement.innerHTML = `
+            <article class="cate-item">
+                <img src="${product.img}" alt="${product.name}" class="cate-item-thumb" />
+                <section class="cate-item-info">
+                    <h3 class="cate-item-title">${product.name}</h3>
+                    <p class="cate-item-desc">${product.description}</p>
+                    <div class="price text-center">${product.price}₫</div>
+                </section>
+            </article>
+        `;
+        productContainer.appendChild(productElement);
+    });
+}
 
 listLocal();

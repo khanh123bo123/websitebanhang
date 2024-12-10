@@ -14,6 +14,31 @@ var chuyen = function () {
     saveproduct();
     window.location = "index.html";
 };
+
+// // Lưu sản phẩm vào Local Storage
+// const saveProduct = (product) => {
+//     let products = JSON.parse(localStorage.getItem("products")) || [];
+//     products.push(product);
+//     localStorage.setItem("products", JSON.stringify(products));
+// };
+
+// // Xử lý khi submit form thêm sản phẩm
+// document.getElementById("productForm").addEventListener("submit", (e) => {
+//     e.preventDefault();
+
+//     const product = {
+//         id: document.getElementById("ID").value,
+//         name: document.getElementById("productName").value,
+//         // category: document.getElementById("category").value.toLowerCase(),
+//         price: document.getElementById("price").value,
+//         image: document.getElementById("image").value,
+//     };
+
+//     saveProduct(product);
+//     alert("Sản phẩm đã được thêm!");
+//     e.target.reset();
+// });
+
 $(".proo").click(function (event) {
     event.preventDefault();
     var id = $(this).data("id");

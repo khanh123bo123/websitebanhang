@@ -1,4 +1,53 @@
-var product = [];
+var product = [
+    {
+        id: "SP1",
+        name: "Rolls-Royce Silver Spur (1987)",
+        img: "/img/img-1.jpg",
+        price: 30000000000.0,
+    },
+    {
+        id: "SP2",
+        name: "Rolls-Royce Silver Cloud (1962)",
+        img: "/img/img-2.jpg",
+        price: 50000000000.0,
+    },
+    {
+        id: "SP3",
+        name: "Rolls-Royce Phantom I (1925-1931)",
+        img: "/img/img-3.jpg",
+        price: 60000000000.0,
+    },
+    {
+        id: "SP4",
+        name: "1962 Rolls-Royce Silver Cloud	",
+        img: "/img/img-4.jpg",
+        price: 35000000000.0,
+    },
+    // {
+    //     id: "SP5",
+    //     name: "Audi",
+    //     img: "oto5.jpg",
+    //     price: 654000,
+    // },
+    // {
+    //     id: "SP6",
+    //     name: "Mercedes",
+    //     img: "oto6.jpg",
+    //     price: 123000,
+    // },
+    // {
+    //     id: "SP7",
+    //     name: "Porcher",
+    //     img: "oto7.jpg",
+    //     price: 345000,
+    // },
+    // {
+    //     id: "SP8",
+    //     name: "BMW",
+    //     img: "oto8.jpg",
+    //     price: 258000,
+    // },
+];
 var pro = [];
 
 function saveproduct() {
@@ -72,5 +121,61 @@ var listLocal = function () {
     }
     Save();
 };
+function searchProducts() {
+    const searchInput = document
+        .getElementById("searchInput")
+        .value.toLowerCase();
+    const filteredProducts = product.filter(
+        (p) =>
+            p.name.toLowerCase().includes(searchInput) ||
+            (p.description && p.description.toLowerCase().includes(searchInput))
+    );
 
+    displayProducts(filteredProducts);
+}
+
+// Lắng nghe sự kiện nút tìm kiếm
+document
+    .getElementById("searchButton")
+    .addEventListener("click", function (event) {
+        event.preventDefault(); // Ngăn chặn reload trang
+        searchProducts();
+    });
+
+// Lắng nghe sự kiện khi người dùng nhấn "Enter"
+document
+    .getElementById("searchInput")
+    .addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault(); // Ngăn chặn reload trang
+            searchProducts();
+        }
+    });
+
+function displayProducts(products) {
+    const productContainer = document.getElementById("banchay");
+    productContainer.innerHTML = ""; // Xóa danh sách cũ
+
+    if (products.length === 0) {
+        productContainer.innerHTML =
+            '<div class="col text-center">Không tìm thấy sản phẩm nào</div>';
+        return;
+    }
+
+    products.forEach((product) => {
+        const productElement = document.createElement("div");
+        productElement.className = "col";
+        productElement.innerHTML = `
+            <article class="cate-item">
+                <img src="${product.img}" alt="${product.name}" class="cate-item-thumb" />
+                <section class="cate-item-info">
+                    <h3 class="cate-item-title">${product.name}</h3>
+                    <p class="cate-item-desc">${product.description}</p>
+                    <div class="price text-center">${product.price}₫</div>
+                </section>
+            </article>
+        `;
+        productContainer.appendChild(productElement);
+    });
+}
 listLocal();

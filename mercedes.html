@@ -45,34 +45,67 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+   <!-- --header-- -->
+   <div class="container-fluid header">
     <div class="container-fluid fixed-top bg-light">
-        <nav class="navbar navbar-expand-lg">
-            <a href="index.html" class="navbar-brand">
+
+        <nav class=" navbar  navbar-expand-lg">
+            <a href="../index.html" class="navbar-brand">
                 <div class="logo">
-                    <img src="./img/logo-z.png" alt="Logo" />
+                    <img src="../img/logo-z.png" alt="">
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <button class="navbar-toggler menu" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
                     <i class="fas fa-bars"></i>
                 </span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="rollroyces.html">Rolls Royce</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mercedes.html">Mercedes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="bentley.html">Bentley</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Chevorlet.html">Chevorlet</a></li>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto header-menu">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Trang chủ<span class="sr-only">(current)</span></a>
+                    </li>
+                    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rollroyces.html" tabindex="-1" aria-disabled="true">Rolls-royce</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mercedes.html" tabindex="-1" aria-disabled="true">Mercedes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bentley.html" tabindex="-1" aria-disabled="true">Bentley</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Chevorlet.html" tabindex="-1" aria-disabled="true">Chevrolet</a>
+                    </li>
+
+
                 </ul>
-                <div class="form-inline">
-                    <input type="text" class="form-control mr-2" placeholder="Search..">
-                    <button class="btn btn-outline-secondary">Search</button>
+                <div class="mr-3 cart">
+                    <a href="#" onclick="checkLogin()">
+                        <i class="fas fa-user"></i>
+                    </a>
+
+
+                    <a class="ml-3 mr-3" href="../cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+
                 </div>
+                <div class="form-inline search">
+                    <input type="text" class="form-control" placeholder="Search..">
+                    <button type="submit" class="form-control btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
             </div>
         </nav>
     </div>
+
+</div>
 
     <!-- Product Grid -->
     <div class="container product-grid">
@@ -80,90 +113,9 @@
             <!-- Products will be dynamically added here -->
         </div>
     </div>
-     <!-- --footer-- -->
-     <div class="container-fluid">
-
-        <!-- --thongtin-- -->
-        <div class="container info">
-
-            <div class="row mt-5 mb-5">
-                <div class="col-3 info-col">
-                    <div class="h6">
-                        GỌI MUA HÀNG(8:30 - 17:00)
-                    </div>
-                    <a href="tel:0395342134">
-
-                        <i class="fas fa-phone-alt"></i>
-                        033 892 7972
-                    </a>
-
-                    <div class="info-foot">Tất cả các ngày trong tuần</div>
-                </div>
-                <div class="col-3 info-col">
-                    <div class="h6">GỌI MUA HÀNG(8:30 - 17:00) </div>
-
-                    <a href="tel:0395342134">
-                        <i class="fas fa-phone-alt"></i>
-                        033 892 7972
-                    </a>
-
-                    <div class="info-foot">Tất cả các ngày trong tuần</div>
-                </div>
-
-                <div class="col-3">
-                    <div class="h6">ĐĂNG KÍ NHẬN THÔNG TIN MỚI</div>
-                    <form action="" class="form-inline">
-                        <input type="text" class="form-control" style="width: 60%;">
-                        <a href="" class=" btn btn-outline-dark">Đăng kí</a>
-                    </form>
-                </div>
-                <div class="col-3 info-social">
-                    <div class="h6">THEO DÕI CHÚNG TÔI</div>
-                    <div class="row">
-                        <div class="col-3">
-                            <a href="">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="">
-                                <i class="fab fa-twitter"></i>
-
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="mr-3 cart">
-            <div class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="userDropdown">
-                    <i class="fas fa-user"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="user/auth.html" id="loginBtn">Đăng nhập</a>
-                    <a class="dropdown-item" href="user/profile.html" id="profileBtn" style="display: none;">Thông tin cá nhân</a>
-                    <a class="dropdown-item" href="admin/trangchu.html" id="adminBtn" style="display: none;">Quản trị</a>
-                    <a class="dropdown-item" href="#" id="logoutBtn" style="display: none;" onclick="logout()">Đăng xuất</a>
-                </div>
-            </div>
-            <a class="ml-3 mr-3" href="./cart.html">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-        </div>
         <!-- ---- -->
         <!-- --footer-- -->
+    <div class="container-fluid">
         <div class="container-fluid footer-3">
             <div class="container">
                 <div class="row">
@@ -194,10 +146,10 @@
                         <div class="h6">HỆ THỐNG CỬA HÀNG</div>
                         <ul>
                             <li>
-                                Zero Shop
+                                Zero Showroom
                             </li>
                             <li class="text">
-                                Địa chỉ: Chung Cư Đông Hải, Tô Ký, Tân Chánh Hiệp, Quận 12  
+                                Địa chỉ: 273 An Dương Vương   
                             </li>
                             <li>
                                 Phone : 033 892 7972
@@ -206,25 +158,90 @@
                     </div>
                     <div class="col-3 link-support">
                         <div class="h6">VỀ CHÚNG TÔI</div>
-                        <div class="text">Với hơn 20 cửa hàng tri dài cả nước, Germe hy vọng sẽ mang đến sự phục vụ chu
-                            đáo cho tất
-                            cả các khách hàng. Hệ thống cửa hàng thời trang Germe luôn luôn lắng nghe những ý kiến đóng
-                            góp từ các khách hàng với mục tiêu đẩy mạnh dịch vụ, mở rộng hệ thống và làm hài lòng những
-                            vị khách đến trên toàn quốc.</div>
+                        <div class="text">Chào mừng bạn đến với "Zero Showroom", nơi lưu giữ 
+                            và tôn vinh giá trị vượt thời gian của ô tô cổ. Mang đến 
+                            bộ sưu tập các mẫu xe huyền thoại, phong cách cổ điển sang 
+                            trọng đến những biểu tượng lịch sử của ngành ô tô. Đến với 
+                            chúng tôi, bạn tìm thấy những chiếc xe đặc biệt và cảm nhận 
+                            được niềm đam mê trong từng chi tiết. Hãy chiêm ngưỡng tuyệt 
+                            tác vượt thời gian! 
+                        </div>
                     </div>
                     <div class="col-3">
                         <div class="h6">FANPAGE CHÚNG TÔI</div>
-                        <div class="fb-page" data-href="https://www.facebook.com/motplus/" data-tabs="timeline"
+                        <div class="fb-page" data-href="https://www.facebook.com" data-tabs="timeline"
                             data-width="360" data-height="200" data-small-header="false"
                             data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                            <blockquote cite="https://www.facebook.com/motplus/" class="fb-xfbml-parse-ignore"><a
-                                    href="https://www.facebook.com/motplus/">Mọt +</a></blockquote>
+                            <blockquote cite="https://www.facebook.com" class="fb-xfbml-parse-ignore"><a
+                                    href="https://www.facebook.com">Mọt +</a></blockquote>
+                        </div>
+                    </div>
+
+                    <!-- --thongtin-- -->
+                    <div class="container info">
+
+                        <div class="row mt-5 mb-5">
+                            <div class="col-3 info-col">
+                                <div class="h6">
+                                    GỌI TƯ VẤN(8:30 - 17:00)
+                                </div>
+                                <a href="tel:0111 111 111">
+
+                                    <i class="fas fa-phone-alt"></i>
+                                    0111 111 111
+                                </a>
+
+                                <div class="info-foot">Tất cả các ngày trong tuần</div>
+                            </div>
+                            <div class="col-3 info-col">
+                                <div class="h6">GỌI MUA HÀNG(8:30 - 17:00) </div>
+
+                                <a href="tel:0123 456 789">
+                                    <i class="fas fa-phone-alt"></i>
+                                    0123 456 789
+                                </a>
+
+                                <div class="info-foot">Tất cả các ngày trong tuần</div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="h6">ĐĂNG KÍ NHẬN THÔNG TIN MỚI</div>
+                                <form action="" class="form-inline">
+                                    <input type="text" class="form-control" style="width: 60%;">
+                                    <a href="" class=" btn btn-outline-dark">Đăng kí</a>
+                                </form>
+                            </div>
+                            <div class="col-3 info-social">
+                                <div class="h6">THEO DÕI CHÚNG TÔI</div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <a href="">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-3">
+                                        <a href="">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-3">
+                                        <a href="">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-3">
+                                        <a href="">
+                                            <i class="fab fa-twitter"></i>
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- ---- -->
     </div>
     <!-- ---- -->
 
@@ -263,7 +280,7 @@
             },
             {
                 name: 'Mercedes-Benz 300 SL Roadster 1963',
-                price: '600.000 USD',
+                price: '45.000.000.000₫',
                 img: 'https://cdn.vovlive.vn/2022/01/17/image.vtc.vn-upload-2022-01-16-_xe2-22582036.jpg',
                 details: {
                     year: '1963',
@@ -317,7 +334,7 @@
             },
             {
                 name: 'Mercedes-Benz 280 SL Pagoda 1971',
-                price: '400.000 USD',
+                price: '30.000.000.000₫',
                 img: 'https://cdn.vovlive.vn/2022/01/17/image.vtc.vn-upload-2022-01-16-_xe5-22582199.jpg',
                 details: {
                     year: '1971',
@@ -341,8 +358,173 @@
                     transmission: '4-speed automatic',
                     weight: '1,360 kg'
                 }
-            }
+            },
+           
+            {
+                name: 'Mercedes-Benz 280 SE 3.5 Coupe',
+                price: '30.000.000.000₫',
+                img: 'https://www.gallery-aaldering.com/wp-content/uploads/2024/09/mercedes-benz-280-se-3-5-coupe-w111-026-special-price-1971.jpg',
+                details: {
+                    year: '1971',
+        color: ['Black'],
+        engine: {
+            type: 'V8',
+            displacement: '3.5L',
+            configuration: '8 cylinder V'
+        },
+        performance: {
+            power: '200 HP',
+            topSpeed: '210 km/h',
+            acceleration: '0-100 km/h in 9.5s'
+        },
+        dimensions: {
+            length: '4900 mm',
+            width: '1810 mm',
+            height: '1430 mm'
+        },
+        origin: 'Germany',
+        transmission: '4-speed automatic',
+        weight: '1,600 kg'
+    }
+    },
+            {
+                name: 'Mercedes-Benz 300 SEL 6.3',
+                price: '30.000.000.000₫',
+                img: 'https://www.topgear.com/sites/default/files/images/news-article/2018/04/c40bbec7e6447a69ba0f77f81e1aab59/18c0270_01.jpg',
+                details: {
+                    year: '1970',
+        color: ['Silver'],
+        engine: {
+            type: 'V8',
+            displacement: '6.3L',
+            configuration: '8 cylinder V'
+        },
+        performance: {
+            power: '250 HP',
+            topSpeed: '220 km/h',
+            acceleration: '0-100 km/h in 6.5s'
+        },
+        dimensions: {
+            length: '5000 mm',
+            width: '1810 mm',
+            height: '1440 mm'
+        },
+        origin: 'Germany',
+        transmission: '4-speed automatic',
+        weight: '1,780 kg'
+    }
+    },
+            {
+                name: 'Mercedes-Benz 450 SL (R107)',
+                price: '30.000.000.000₫',
+                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIr5TFPp1VAW27kl_AN1gqdfKRf0xqGIx51Q&s',
+                details: {
+                    year: '1972',
+        color: ['Red'],
+        engine: {
+            type: 'V8',
+            displacement: '4.5L',
+            configuration: '8 cylinder V'
+        },
+        performance: {
+            power: '225 HP',
+            topSpeed: '215 km/h',
+            acceleration: '0-100 km/h in 8.8s'
+        },
+        dimensions: {
+            length: '4390 mm',
+            width: '1790 mm',
+            height: '1300 mm'
+        },
+        origin: 'Germany',
+        transmission: '3-speed automatic',
+        weight: '1,600 kg'
+        }
+    },
+            {
+                name: 'Mercedes-Benz 280 SL Pagoda 1971',
+                price: '40.000.000.000₫',
+                img: 'https://cdn.dealeraccelerate.com/ecpch/2/790/38999/790x1024/w/1971-mercedes-benz-280sl-roadster',
+                details: {
+                    year: '1973',
+        color: ['White'],
+        engine: {
+            type: 'Inline-4 Diesel',
+            displacement: '2.4L',
+            configuration: '4 cylinder in-line'
+        },
+        performance: {
+            power: '65 HP',
+            topSpeed: '148 km/h',
+            acceleration: '0-100 km/h in 22.0s'
+        },
+        dimensions: {
+            length: '4680 mm',
+            width: '1770 mm',
+            height: '1440 mm'
+        },
+        origin: 'Germany',
+        transmission: '4-speed manual',
+        weight: '1,350 kg'
+                }
+            },
+            {
+                name: 'Mercedes-Benz 240 D (W115)',
+                price: '30.000.000.000₫',
+                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRky_MacfjhiILYxUfziAzov-dqKS7x0c8FxA&s',
+                details: {
+                    year: '1971',
+                    color: ['Black'],
+                    engine: {
+                        type: 'Straight-6',
+                        displacement: '7.7L',
+                        configuration: '6 cylinder in-line'
+                    },
+                    performance: {
+                        power: '120 HP',
+                        topSpeed: '200 km/h',
+                        acceleration: '0-100 km/h in 9.5s'
+                    },
+                    dimensions: {
+                        length: '4285 mm',
+                        width: '1760 mm',
+                        height: '1305 mm'
+                    },
+                    origin: 'United Kingdom',
+                    transmission: '4-speed automatic',
+                    weight: '1,360 kg'
+                }
+            },
+            {
+                name: 'Mercedes-Benz 450 SEL 6.9',
+                price: '10.000.000.000₫',
+                img: 'https://media.gq-magazine.co.uk/photos/5ffdeb2646c983d69ba8e220/16:9/w_2560%2Cc_limit/12112020_P_05c2263_178.jpg',
+                details: {
+                    year: '1975',
+        color: ['Blue'],
+        engine: {
+            type: 'V8',
+            displacement: '6.9L',
+            configuration: '8 cylinder V'
+        },
+        performance: {
+            power: '286 HP',
+            topSpeed: '225 km/h',
+            acceleration: '0-100 km/h in 7.4s'
+        },
+        dimensions: {
+            length: '4960 mm',
+            width: '1870 mm',
+            height: '1460 mm'
+        },
+        origin: 'Germany',
+        transmission: '3-speed automatic',
+        weight: '1,935 kg'
+                }
+            },
         ];
+
+        
 
         function renderProducts() {
             const productGrid = document.querySelector('.product-grid .row');
@@ -385,6 +567,112 @@
         }
        
         document.addEventListener('DOMContentLoaded', renderProducts);
+        
+            const itemsPerPage = 4; // Số sản phẩm trên mỗi trang
+            let currentPage = 1;
+
+            function renderProducts() {
+                const productGrid =
+                    document.querySelector(".product-grid .row");
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+
+                // Lọc sản phẩm để hiển thị
+                const displayedProducts = products.slice(startIndex, endIndex);
+
+                productGrid.innerHTML = displayedProducts
+                    .map((product) => {
+                        const productJSON = encodeURIComponent(
+                            JSON.stringify(product)
+                        );
+
+                        return `
+            <div class="col-md-3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <a href="#" onclick="handleProductClick(event, JSON.parse(decodeURIComponent('${productJSON}')))">
+                            <img src="${product.img}" 
+                                alt="${product.name}" 
+                                onerror="this.onerror=null; this.src='path/to/local/backup-image.jpg';">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">${product.name}</div>
+                        <div class="product-pricing">${product.price}</div>
+                    </div>
+                </div>
+            </div>
+        `;
+                    })
+                    .join("");
+
+                renderPagination();
+            }
+
+            function renderPagination() {
+                const totalPages = Math.ceil(products.length / itemsPerPage);
+                const paginationContainer =
+                    document.querySelector(".pagination");
+
+                if (!paginationContainer) {
+                    const container = document.querySelector(".product-grid");
+                    const paginationDiv = document.createElement("div");
+                    paginationDiv.className =
+                        "pagination d-flex justify-content-center mt-4";
+                    container.appendChild(paginationDiv);
+                }
+
+                const paginationEl = document.querySelector(".pagination");
+                paginationEl.innerHTML = "";
+
+                // Nút Previous
+                const prevButton = document.createElement("button");
+                prevButton.className = `btn btn-outline-secondary mr-2 ${
+                    currentPage === 1 ? "disabled" : ""
+                }`;
+                prevButton.innerText = "Trước";
+                prevButton.onclick = () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderProducts();
+                    }
+                };
+                paginationEl.appendChild(prevButton);
+
+                // Các nút trang
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageButton = document.createElement("button");
+                    pageButton.className = `btn mr-2 ${
+                        i === currentPage
+                            ? "btn-primary"
+                            : "btn-outline-secondary"
+                    }`;
+                    pageButton.innerText = i;
+                    pageButton.onclick = () => {
+                        currentPage = i;
+                        renderProducts();
+                    };
+                    paginationEl.appendChild(pageButton);
+                }
+
+                // Nút Next
+                const nextButton = document.createElement("button");
+                nextButton.className = `btn btn-outline-secondary ${
+                    currentPage === totalPages ? "disabled" : ""
+                }`;
+                nextButton.innerText = "Sau";
+                nextButton.onclick = () => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        renderProducts();
+                    }
+                };
+                paginationEl.appendChild(nextButton);
+            }
+
+            // Thay thế dòng cũ bằng:
+            document.addEventListener("DOMContentLoaded", renderProducts);
+        </script>
      
 
     </script>

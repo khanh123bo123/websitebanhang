@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tóm Tắt Đơn Hàng - Zero Showroom</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <style>
+            body {
+                padding-top: 80px; /* Adjust for fixed navbar */
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+            .order-summary {
+                flex: 1;
+                margin-bottom: 30px;
+            }
+            .footer-3 {
+                margin-top: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar from the original file -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img
+                        src="../img/logo-z.png"
+                        alt="Zero Showroom Logo"
+                        height="50"
+                    />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#my-nav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="my-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html"
+                                >Trang chủ
+                                <span class="sr-only">(current)</span></a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rollroyces.html"
+                                >Rolls-royce</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mercedes.html"
+                                >Mercedes</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bentley.html">Bentley</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Chevorlet.html"
+                                >Chevrolet</a
+                            >
+                        </li>
+                    </ul>
+                    <div class="cart mr-3">
+                        <a href="#" onclick="checkLogin()"></a>
+                        <a href="../cart.html" class="ml-3 mr-3"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Order Summary Container -->
+        <div class="container order-summary">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-4">Xác Nhận Đơn Hàng</h2>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Chi Tiết Đơn Hàng</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="text-primary">
+                                        Thông Tin Khách Hàng
+                                    </h5>
+                                    <p>
+                                        <strong>Họ tên:</strong>
+                                        <span id="inputnguoinhan2"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Số điện thoại:</strong>
+                                        <span id="inputsdt2"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Email:</strong>
+                                        <span id="inputemail2"></span>
+                                    </p>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h5 class="text-primary">
+                                        Địa Chỉ Giao Hàng
+                                    </h5>
+                                    <p>
+                                        <strong>Địa chỉ:</strong>
+                                        <span id="inputdiachi2"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Tỉnh/Thành phố:</strong>
+                                        <span id="inputtinh2"></span>
+                                    </p>
+                                    <p>
+                                        <strong>Hình thức thanh toán:</strong>
+                                        <span id="inputthanhtoan2"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="text-primary">
+                                        Chi Tiết Sản Phẩm
+                                    </h5>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Sản Phẩm</th>
+                                                <th>Số Lượng</th>
+                                                <th>Đơn Giá</th>
+                                                <th>Tổng Cộng</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="cart-items-summary">
+                                            <!-- Cart items will be dynamically populated here -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="col-md-6 offset-md-6 text-right">
+                                    <h5>Tổng Đơn Hàng</h5>
+                                    <p>
+                                        <strong>Tạm Tính:</strong>
+                                        <span class="total-cart total-1"></span>
+                                        ₫
+                                    </p>
+                                    <p>
+                                        <strong>Tổng Cộng:</strong>
+                                        <span class="total-cart total"></span> ₫
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button
+                                class="btn btn-primary mr-2"
+                                onclick="window.print()"
+                            >
+                                In Hóa Đơn
+                            </button>
+                            <a href="../index.html" class="btn btn-secondary"
+                                >Quay Về Trang Chủ</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer from the original file -->
+        <div class="container-fluid footer-3">
+            <!-- Rest of the footer content from the original HTML -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 link-support">
+                        <h6>HỖ TRỢ KHÁCH HÀNG</h6>
+                        <ul>
+                            <li><a href="#">Hướng dẫn mua hàng</a></li>
+                            <li><a href="#">Chính sách đổi/trả</a></li>
+                            <li><a href="#">Hình thức thanh toán</a></li>
+                            <li><a href="#">Chính sách giao hàng</a></li>
+                            <li><a href="#">Thông tin bảo mật</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <!-- Rest of the footer sections -->
+                    <!-- ... (copy the rest from the original HTML) -->
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            // Function to populate order summary details
+            function populateOrderSummary() {
+                const orderDetails = JSON.parse(
+                    localStorage.getItem("lastOrder")
+                );
+                const cartItems = JSON.parse(
+                    localStorage.getItem("cartItems") || "[]"
+                );
+                const cartItemsSummaryElement =
+                    document.getElementById("cart-items-summary");
+
+                console.log("Retrieved order details:", orderDetails);
+                console.log("Retrieved cart items:", cartItems);
+                if (orderDetails) {
+                    // Hiển thị thông tin khách hàng
+                    document.getElementById("inputnguoinhan2").textContent =
+                        orderDetails.customerName;
+                    document.getElementById("inputsdt2").textContent =
+                        orderDetails.phoneNumber;
+                    document.getElementById("inputemail2").textContent =
+                        orderDetails.email;
+                    document.getElementById("inputdiachi2").textContent =
+                        orderDetails.address;
+                    document.getElementById("inputthanhtoan2").textContent =
+                        orderDetails.paymentMethod;
+                    document.getElementById("inputtinh2").textContent =
+                        orderDetails.province || "Chưa chọn";
+
+                    // Hiển thị tổng tiền
+                    const totalCartElements = document.querySelectorAll(
+                        ".total-cart.total-1, .total-cart.total"
+                    );
+                    totalCartElements.forEach((element) => {
+                        element.textContent = orderDetails.totalAmount;
+                    });
+
+                    // Hiển thị chi tiết sản phẩm trong giỏ hàng
+                    if (cartItems.length > 0) {
+                        cartItems.forEach((item) => {
+                            const row = document.createElement("tr");
+                            row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>${item.quantity}</td>
+                    <td>${item.price.toLocaleString()} ₫</td>
+                    <td>${(item.quantity * item.price).toLocaleString()} ₫</td>
+                `;
+                            cartItemsSummaryElement.appendChild(row);
+                        });
+                    } else {
+                        const noItemsRow = document.createElement("tr");
+                        noItemsRow.innerHTML =
+                            '<td colspan="4" class="text-center">Không có sản phẩm trong giỏ hàng</td>';
+                        cartItemsSummaryElement.appendChild(noItemsRow);
+                    }
+
+                    // Hiển thị ghi chú nếu có
+                    if (
+                        orderDetails.notes &&
+                        orderDetails.notes !== "Không có ghi chú"
+                    ) {
+                        const notesSection = document.createElement("div");
+                        notesSection.innerHTML = `<strong>Ghi chú:</strong> ${orderDetails.notes}`;
+                        document
+                            .querySelector(".card-body")
+                            .appendChild(notesSection);
+                    }
+                } else {
+                    alert("Không tìm thấy thông tin đơn hàng");
+                }
+            }
+
+            // Gọi hàm khi trang load
+            window.onload = populateOrderSummary;
+        </script>
+    </body>
+</html>

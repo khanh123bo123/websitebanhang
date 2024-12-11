@@ -40,67 +40,105 @@
 
     <body>
         <!-- --header-- -->
-    <div class="container-fluid header">
-        <div class="container-fluid fixed-top bg-light">
+        <div class="container-fluid header">
+            <div class="container-fluid fixed-top bg-light">
+                <nav class="navbar navbar-expand-lg">
+                    <a href="index.html" class="navbar-brand">
+                        <div class="logo">
+                            <img src="./img/logo-z.png" alt="" />
+                        </div>
+                    </a>
+                    <button
+                        class="navbar-toggler menu"
+                        data-target="#my-nav"
+                        data-toggle="collapse"
+                        aria-controls="my-nav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon">
+                            <i class="fas fa-bars"></i>
+                        </span>
+                    </button>
+                    <div id="my-nav" class="collapse navbar-collapse">
+                        <ul class="navbar-nav mr-auto header-menu">
+                            <li class="nav-item active">
+                                <a class="nav-link" onclick="chuyen()"
+                                    >Trang Chủ
+                                    <span class="sr-only delepro"
+                                        >(current)</span
+                                    ></a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="rollroyces.html"
+                                    tabindex="-1"
+                                    aria-disabled="true"
+                                    >Rolls-royce</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="mercedes.html"
+                                    tabindex="-1"
+                                    aria-disabled="true"
+                                    >Mercedes</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="bentley.html"
+                                    tabindex="-1"
+                                    aria-disabled="true"
+                                    >Bentley</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link"
+                                    href="Chevorlet.html"
+                                    tabindex="-1"
+                                    aria-disabled="true"
+                                    >Chevrolet</a
+                                >
+                            </li>
+                        </ul>
+                        <div class="mr-3 cart">
+                            <a onclick="checkLogin()" >
+                                <i class="fas fa-user"></i>
+                            </a>
 
-            <nav class=" navbar  navbar-expand-lg">
-                <a href="../index.html" class="navbar-brand">
-                    <div class="logo">
-                        <img src="../img/logo-z.png" alt="">
+                            <a class="ml-3 mr-3" href="./cart.html">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                        <div class="form-inline search">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Search.."
+                            />
+                            <button type="submit" class="form-control btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
                     </div>
-                </a>
-                <button class="navbar-toggler menu" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-                        <i class="fas fa-bars"></i>
-                    </span>
-                </button>
-                <div id="my-nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav mr-auto header-menu">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="../index.html">Trang chủ<span class="sr-only">(current)</span></a>
-                        </li>
-                        
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="rollroyces.html" tabindex="-1" aria-disabled="true">Rolls-royce</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="mercedes.html" tabindex="-1" aria-disabled="true">Mercedes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="bentley.html" tabindex="-1" aria-disabled="true">Bentley</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Chevorlet.html" tabindex="-1" aria-disabled="true">Chevrolet</a>
-                        </li>
-
-
-                    </ul>
-                    <div class="mr-3 cart">
-                        <a href="#" onclick="checkLogin()">
-                            <i class="fas fa-user"></i>
-                        </a>
-
-
-                        <a class="ml-3 mr-3" href="../cart.html">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-
-                    </div>
-                    <div class="form-inline search">
-                        <input type="text" class="form-control" placeholder="Search..">
-                        <button type="submit" class="form-control btn">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
 
-    </div>
+        <!-- --product-- -->
+         <div class="container-fluid mt-5 mb-5">
+            
+            <div class="container chitietsanpham" id="chitiet"></div>
+        </div> 
+
         
+        <!-- ---- -->
         <!-- --footer-- -->
     <div class="container-fluid">
         <div class="container-fluid footer-3">
@@ -139,7 +177,7 @@
                                 Địa chỉ: 273 An Dương Vương   
                             </li>
                             <li>
-                                Phone : 033 892 7972
+                                Phone : 0111 111 111 / 0123 456 789
                             </li>
                         </ul>
                     </div>
@@ -229,6 +267,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </body>
     <script src="js/product2.js"></script>
